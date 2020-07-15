@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+:root {
+  --paleBlue: hsl(243, 100%, 93%);
+  --grayishBlue: hsl(229, 7%, 55%);
+  --darkBlue: hsl(228, 56%, 26%);
+  --veryDarkBlue: hsl(229, 57%, 11%);
+
+  --gradient: linear-gradient(to right,  hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+body {
+  background: var(--veryDarkBlue);
+  background-image: url('./assets/bg-desktop.png');  
+  background-repeat: no-repeat;  
+  background-size: 140%;
+  background-position-y: 50vh;
+
+  font-family: 'Raleway', sans-serif;
+}
+
+article {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  height: 100vh;
+}
+
+.logos{
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: center;  
+
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  padding-right: 6rem;
+
+  background: var(--darkBlue);
+  border-radius: 1.5rem 6rem 1.5rem 1.5rem;
+}
+
+.logos .logo {
+  padding-bottom: 1.5rem;
+}
+
+.items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.items a{
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--veryDarkBlue);
+  border-radius: 0.4rem;
+
+
+  height: 3rem;
+  width:  3rem;  
+}
+
+.item a svg{
+  height: 1.5rem;
+  width:  1.5rem;  
+
+}
+
+.item + .item{
+  margin-left: 1.5rem;
+}
+
+.storage{
+  padding: 3rem;
+  margin-top: 36px;
+  margin-left: 30px;  
+
+  background: var(--darkBlue);
+  border-radius: 1.5rem;
+
+  position: relative;
+}
+
+.storage .resume {
+  background:white;
+
+  padding: .9rem;
+  width: max-content;
+  max-width: 100%;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+
+  position: absolute;
+  top: -30px;
+  right:  3rem;
+}
+
+.storage p{
+  color: white;
+  padding-bottom: .5rem;
+}
+
+.storage .resume .normal{
+  color: var(--grayishBlue);
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+
+.storage .resume .normal .heavy{
+  font-weight: 700;
+  font-size: 2rem;
+  margin-left: 20%;
+  color: black;  
+  margin: 0;  
+}
+
+.storage .resume::after {
+  content: '';
+  border: 10px solid transparent;
+  border-top-color: black;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;  
+}
+
+.storage .progress {
+  background: var(--veryDarkBlue);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 1.5em;
+  width: 30rem;
+}
+
+.storage .progress .progress-value {
+  animation: load 3s normal forwards;  
+  border-radius: 100px;
+  background: var(--gradient);
+  height: 1rem;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 60%; }
+}
+
+.storage .legend {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  color: white;
+
+  font-weight: 700;
+}
+
+@media (max-width: 1180px ){
+
+  body{
+    background-size: 180%;
+  }
+
+}
+
+@media (max-width: 990px ){
+
+  body{
+    background-size: 180%;
+  }
+
+  .storage .progress{
+    width: 25rem;
+  }
+
+}
+
+@media (max-width: 900px ){
+
+  body{
+    background-size: 200%;
+  }
+
+  .storage .progress{
+    width: 20rem;
+  }
+
+}
+
+@media (max-width: 800px ){
+
+  body{
+    background-size: 300%;
+  }
+
+  article {
+    flex-direction: column;
+  }
+
+  .logos {
+    padding-right: 11.5rem;
+    border-radius: 1.5rem 6rem .7rem 1.5rem;
+  }
+
+  .storage {
+    margin-left: 0;
+    margin-top: 10px;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .storage p{
+    text-align: center;
+
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;    
+  }
+
+  .storage .resume {
+    top: 80%;
+    right: 35%;
+    border-radius: 10px;    
+  }
+
+  .storage .resume p{
+    padding-top: 0; 
+    padding-bottom: 0;
+  }
+
+  .storage .resume::after {
+    display: none;
+  }
+
+  .storage .resume .normal {  
+    font-size: 18px;
+  }
+
+  .storage .resume .normal .heavy {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 800px ){
+
+  body{
+    background-size: 400%;
+  }
+
+}
