@@ -271,3 +271,79 @@ article {
   }
 
 }
+
+@media (max-width: 500px){
+
+  body{
+    background-size: 500%;
+  }
+
+  .logos{
+    padding-right: 7.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .storage{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .storage p{
+    padding-bottom: 1rem;    
+  }
+
+  .storage .resume{
+    right: 28%;
+  }
+
+  .storage .progress{
+    width: 18rem;
+  }
+
+  .storage .legend p{
+    padding-top: .5rem;
+    padding-bottom: .5rem;    
+  }
+}
+
+@media (max-width: 400px){
+
+  .logos{
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-right: 4.5rem;
+    padding-left: 2rem;        
+  }
+
+  .logos .items a {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .storage p{
+    font-size: small;
+  }
+
+  .storage .progress{
+    width: 15rem;
+    height: 1rem;
+  }
+
+  .storage .progress .progress-value {
+    height: .5rem;
+  }
+
+  .storage .resume{
+    right: 32%;
+  }
+
+  .storage .resume .normal{
+    font-size: 12px;
+  }
+
+  .storage .resume .normal .heavy{  
+    font-size: 1.5rem;
+  }
+}
